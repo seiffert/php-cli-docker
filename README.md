@@ -6,7 +6,7 @@ This repository is used to create Docker images for running PHP CLI commands.
 Usage
 --------------------
 
-1. Install the `pseiffert/php` container (optional - this step is performed by Docker automatically when running the container):
+1. Install the `pseiffert/php-cli` container (optional - this step is performed by Docker automatically when running the container):
 
     ``` sh
     $ docker pull pseiffert/php-cli
