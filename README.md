@@ -15,7 +15,7 @@ Usage
 2. Define an bash alias that runs this container whenever `composer` is invoked on the command line:
 
 	``` sh
-	$ echo "alias php='docker run --rm -it -v $(pwd):/opt pseiffert/php-cli'" >> ~/.bashrc
+	$ echo "alias php='docker run --rm -it -v \$(pwd):/opt pseiffert/php-cli'" >> ~/.bashrc
 	$ source ~/.bashrc
 	```
 
