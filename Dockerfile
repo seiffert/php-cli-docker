@@ -1,8 +1,12 @@
-FROM php:5.6.2-cli
+FROM ubuntu:trusty
 MAINTAINER Paul Seiffert <paul.seiffert@gmail.com>
 
-RUN echo "date.timezone = \"Europe/Berlin\"" >> /usr/local/etc/php/php.ini
-RUN echo "memory_limit = 512M" >> /usr/local/etc/php/php.ini
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update
+RUN apt-get install -y php5-cli
+RUN echo "date.timezone = \"Europe/Berlin\"" >> /etc/php5/cli/php.ini
+RUN echo "memory_limit = 512M" >> /etc/php5/cli/php.ini
 RUN mkdir -p /opt/workspace
 
 WORKDIR /opt/workspace
